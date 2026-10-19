@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://yaepd7yx6yam"]
+
+[ext_resource type="Script" uid="uid://bvt2g54l2j27m" path="res://addons/godotite/demo/demo_terrain.gd" id="1_terrain"]
+[ext_resource type="Script" uid="uid://bixs0pmww58mp" path="res://addons/godotite/godotite_builder.gd" id="2_builder"]
+[ext_resource type="Script" uid="uid://dva6huwllljbx" path="res://addons/godotite/demo/demo_fly_camera.gd" id="3_camera"]
+[ext_resource type="Script" uid="uid://63qwhe5noblw" path="res://addons/godotite/demo/demo_hud.gd" id="4_hud"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sky"]
+sky_top_color = Color(0.22, 0.42, 0.78, 1)
+sky_horizon_color = Color(0.62, 0.74, 0.88, 1)
+ground_horizon_color = Color(0.62, 0.74, 0.88, 1)
+
+[sub_resource type="Sky" id="Sky_demo"]
+sky_material = SubResource("ProceduralSkyMaterial_sky")
+
+[sub_resource type="Environment" id="Environment_demo"]
+background_mode = 2
+sky = SubResource("Sky_demo")
+ambient_light_source = 3
+tonemap_mode = 2
+fog_enabled = true
+fog_light_color = Color(0.62, 0.74, 0.88, 1)
+fog_density = 0.0002
+
+[node name="GodotiteDemo" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_demo")
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.8253356, -0.4050497, 0.3933902, 0, 0.6967067, 0.7173561, -0.5646425, -0.59205955, 0.57501686, 0, 0, 0)
+shadow_enabled = true
+directional_shadow_max_distance = 3000.0
+
+[node name="DemoTerrain" type="MeshInstance3D" parent="."]
+script = ExtResource("1_terrain")
+
+[node name="DemoTerrainBuilder" type="Node3D" parent="."]
+script = ExtResource("2_builder")
+source = NodePath("../DemoTerrain")
+
+[node name="FlyCam" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.971338, 0.23770262, 0, -0.23770262, 0.971338, 0, 350, 1100)
+far = 10000.0
+script = ExtResource("3_camera")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource("4_hud")
+build_hint = "In the editor, select DemoTerrain and press Generate: it makes the terrain
+and builds its LOD, in a few seconds. Then save the scene and run it again.
+Building needs the .NET version of Godot."

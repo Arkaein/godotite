@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Godotite", "Godotite.csproj", "{AD6E81AA-8ABA-4CEA-9FF1-C54F4E7EB126}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		ExportDebug|Any CPU = ExportDebug|Any CPU
+		ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD6E81AA-8ABA-4CEA-9FF1-C54F4E7EB126}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD6E81AA-8ABA-4CEA-9FF1-C54F4E7EB126}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD6E81AA-8ABA-4CEA-9FF1-C54F4E7EB126}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{AD6E81AA-8ABA-4CEA-9FF1-C54F4E7EB126}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{AD6E81AA-8ABA-4CEA-9FF1-C54F4E7EB126}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{AD6E81AA-8ABA-4CEA-9FF1-C54F4E7EB126}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal

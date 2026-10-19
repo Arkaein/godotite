@@ -1,0 +1,11 @@
+# Godot
+.godot/
+export_presets.cfg
+
+# C# build output
+bin/
+obj/
+*.user
+
+# DAGs and the demo's generated terrain: derived data, rebuilt with Generate or Regenerate
+/godotite_generated/

@@ -1,0 +1,16 @@
+# Normalize line endings for text files.
+* text=auto eol=lf
+
+# The Asset Library download holds only addons/godotite: everything at the root stays out of it.
+/.gitattributes export-ignore
+/.gitignore export-ignore
+/project.godot export-ignore
+/Godotite.csproj export-ignore
+/Godotite.sln export-ignore
+/README.md export-ignore
+/LICENSE export-ignore
+/copy_addon.sh export-ignore
+/icon.svg export-ignore
+/icon.svg.import export-ignore
+/RELEASING.md export-ignore
+/media export-ignore

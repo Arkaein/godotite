@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://addons/godotite/tools/graybox_checker.gdshader" id="1_shader"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_shader")
+shader_parameter/checker_space = 0
+shader_parameter/world_scale = 0.15
+shader_parameter/uv_scale = 24.0
+shader_parameter/light_color = Color(0.82, 0.82, 0.84, 1)
+shader_parameter/dark_color = Color(0.34, 0.34, 0.37, 1)
+shader_parameter/tint_strength = 0.55
+shader_parameter/roughness_value = 0.9
+shader_parameter/flat_shading = false
