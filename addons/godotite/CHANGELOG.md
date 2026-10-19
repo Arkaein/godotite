@@ -3,7 +3,7 @@
 Notable changes to Godotite, newest first. Versions follow [semantic versioning](https://semver.org):
 before 1.0, a minor version may change the DAG format, settings or API.
 
-## 0.9.0 (unreleased)
+## 0.9.0 (2026-10-19)
 
 The first public release.
 
